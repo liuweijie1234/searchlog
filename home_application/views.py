@@ -11,15 +11,11 @@ def home(request):
     return render(request, 'home_application/index_home.html')
 
 
-def dev_guide(request):
+def config(request):
     """
-    开发指引
+    配置
     """
-    return render(request, 'home_application/dev_guide.html')
+    return render(request, 'home_application/config.html')
 
 
-def contact(request):
-    """
-    联系页
-    """
-    return render(request, 'home_application/contact.html')
+

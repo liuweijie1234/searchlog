@@ -1,30 +1,196 @@
-{% extends "base.html" %}
-{% load i18n %}
-{% block head %}
-	<title>{%trans "蓝鲸开发框架" %}</title>
-	{{ block.super }}
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block content %}
-    <div class="home-page">
-    	<div class="page-arrow">
-			<div class="container">
-				<!-- 蓝鲸智云开发框架说明  Start -->
-				<div class="tc title-word">
-					<p>{%trans "欢迎使用蓝鲸智云PaaS平台" %}</p>
-				</div>
-				<div class="tc title-word-second">
-					<p>{%trans "蓝鲸智云开发框架" %}<small class="pl10">{%trans "助力你的自动化" %}</small></p>
-				</div>
-				<hr class="cutting-line">
-				<div class="tc frame-explain-text">
-					<p>{%trans "您现在打开的应用是由蓝鲸智云示例代码生成的，该示例代码称为“SaaS开发框架”。" %}</p>
-					<p>{%trans "蓝鲸智云PaaS平台提供了完善的前后台开发框架、调度引擎、公共组件等模块，帮助业务的产品和技术人员快速构建低成本、免运维的支撑工具和运营系统。" %}</p>
-					<p>{%trans "若想体验快速开发应用的功能，请前往" %}<a class="developer-center" href="{{ BK_DEV_URL }}" target="_blank">{%trans "“开发者中心”" %}</a>{%trans "。" %}</p>
-				</div>
-				<!-- 蓝鲸智云开发框架说明  End -->
-			</div>
-		</div>
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/bootstrap-3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/bk-icon-2.0/iconfont.css" rel="stylesheet">
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/bk/css/bk.css" rel="stylesheet">
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/bk/css-pro/bk.css" rel="stylesheet">
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/daterangepicker-2.0.5/daterangepicker.css" rel="stylesheet">
+    <link href="./css/common.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="bk-horz-nav bk-horz-nav-min">
+        <div class="bk-nav-logo fl">
+            <img src="https://magicbox.bk.tencent.com/static_api/v3/components_pro/horizontal_nav1/images/logo.png">
+        </div>
+        <div class="bk-nav-user fr">
+            <span class="mr5">admin</span>
+            <img src="https://magicbox.bk.tencent.com/static_api/v3/components_pro/horizontal_nav1/images/avatar.png">
+        </div>
+    </nav>
+
+    <div class="bk-layout bk-layout-has-sidebar" style="height:calc(100% - 60px)">
+        <div class="bk-sidebar slide-open">
+            <div class="nav-list mt45">
+                <ul>
+                    <li class="pureLink open active">
+                        <a href="{{ SITE_URL }}index">
+                          <span class="icon-box">
+                            <i class="bk-icon icon-home"></i>
+                          </span>
+                          <span class="nav-name">首页</span>
+                        </a>
+                    </li>
+                    <li class="pureLink">
+                        <a href="{{ SITE_URL }}config">
+                          <span class="icon-box">
+                            <i class="bk-icon icon-cog"></i>
+                          </span>
+                          <span class="nav-name">配置</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>Copyright &copy; 2012-2020 蓝鲸智云.</p>
+                <span>All Rights Reserved.</span>
+            </div>
+        </div>
+
+        <div class="page-content">
+            <div class="bk-panel bk-panel-title-btns">
+                <div class="bk-panel-header" role="tab">
+                    <div class="panel-title">首页</div>
+                </div>
+                <div class="bk-panel-body pt25 pl25 pr25" style="border-bottom: 1px solid #ddd;">
+                    <form class="bk-form">
+                        <div class="row">
+
+                            <div class="col-md-4 col-lg-4 col-xs-4">
+                                <div class="bk-form-item mb20">
+                                    <label class="bk-label pr15" style="width:80px;">业务</label>
+                                    <div class="bk-form-content" style="margin-left:80px;">
+                                        <select name="" id="" class="bk-form-select" style="width:100%;" placeholder="请选择">
+					                <option value="">请选择</option>
+					                <option value="">1</option>
+
+					            </select>
+                                    </div>
+                                </div>
+                                <div class="bk-form-item mb20">
+                                    <label class="bk-label pr15" style="width:80px;">主机</label>
+                                    <div class="bk-form-content" style="margin-left:80px;">
+                                        <select name="" id="" class="bk-form-select" style="width:100%;" placeholder="请选择">
+					                <option value="">请选择</option>
+					                <option value="">1</option>
+					            </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-8 col-lg-8 col-xs-8">
+                                <div class="bk-form-item mb20">
+                                    <label class="bk-label pr15" style="width:80px;">时间</label>
+                                    <div class="bk-form-content" style="margin-left:80px;">
+                                        <input type="text" class="form-control daterangepicker_demo" id="daterangepicker_demo3" placeholder="选择日期...">
+                                    </div>
+                                </div>
+                                <div class="bk-form-item mb20">
+                                    <label class="bk-label pr15" style="width:80px;">关键字</label>
+                                    <div class="bk-form-content" style="margin-left:80px;">
+                                        <input type="text" class="bk-form-input" placeholder="请输入关键字" style="width:100%;">
+                                    </div>
+                                </div>                                <div class="bk-form-item">
+                                    <label class="bk-label pr15" style="width:80px;"></label>
+                                    <div class="bk-form-content tr">
+                                        <button class="bk-button bk-success">查询</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="chart_box" style="height:300px;margin-top: 32px;"></div>
+                </div>
+                <table class="bk-table has-table-bordered has-table-hover">
+                    <thead>
+                        <tr>
+                            <th style="width:72px;">序号</th>
+                            <th style="width:32px;">App</th>
+                            <th style="width:86px;">状态码</th>
+                            <th style="width:60%;">日志内容</th>
+                            <th style="width:120px;">日志时间</th>
+                            <th style="width:120px;">主机IP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>qq.com</td>
+                            <td>400</td>
+                            <td>test ok</td>
+                            <td>2015-07-09</td>
+                            <td>112.95.6.4</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>qq.com</td>
+                            <td>500</td>
+                            <td>get all data success</td>
+                            <td>2015-07-09</td>
+                            <td>112.95.6.4</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>qq.com</td>
+                            <td>600</td>
+                            <td>Error connect mysql error</td>
+                            <td>2015-07-09</td>
+                            <td>112.95.6.4</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>qq.com</td>
+                            <td>700</td>
+                            <td>error 2012-12-23 23 233 4433 Connect redis error, please check your redis config inf config table, and make sure it is ok, you can check by xxxx</td>
+                            <td>2015-07-09</td>
+                            <td>112.95.6.4</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="6">
+                            <div class="pull-right king-page-box">
+                                <div class="pagination-info pull-left" style="margin: 15px 10px">共有100条，每页显示：20条</div>
+                                <ul class="pagination pagination-small pull-right" style="margin: 10px 0">
+                                    <li page-index="1" class="disabled"><a>«</a></li>
+                                    <li page-index="1" class="active"><a>1</a></li>
+                                    <li page-index="1"><a href="javascript:;">2</a></li>
+                                    <li page-index="1"><a href="javascript:;">3</a></li>
+                                    <li page-index="1"><a href="javascript:;">4</a></li>
+                                    <li page-index="1"><a href="javascript:;">»</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tfoot>
+                </table>
+            </div>
+        </div>
     </div>
-{% endblock %}
+
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/js/jquery-1.10.2.min.js"></script>
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/daterangepicker-2.0.5/moment.min.js"></script>
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/daterangepicker-2.0.5/daterangepicker.js"></script>
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/echarts-2.0/echarts-all.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>
+
+{#{% extends "base.html" %}#}
+{#{% load i18n %}#}
+{#{% block head %}#}
+{#	<title>{%trans "蓝鲸开发框架" %}</title>#}
+{#	{{ block.super }}#}
+{#{% endblock %}#}
+{#{% block content %}#}
+{#{% endblock %}#}
 

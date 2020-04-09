@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/bootstrap-3.3.4/css/bootstrap.min.css"
+          rel="stylesheet">
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/bk/css/bk.css" rel="stylesheet">
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/bk/css-pro/bk.css" rel="stylesheet">
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/bk-icon-2.0/iconfont.css" rel="stylesheet">
+    <link href="./css/common.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="bk-horz-nav bk-horz-nav-min">
+    <div class="bk-nav-logo fl">
+        <img src="https://magicbox.bk.tencent.com/static_api/v3/components_pro/horizontal_nav1/images/logo.png">
+    </div>
+    <div class="bk-nav-user fr">
+        <span class="mr5">admin</span>
+        <img src="https://magicbox.bk.tencent.com/static_api/v3/components_pro/horizontal_nav1/images/avatar.png">
+    </div>
+</nav>
+
+<div class="bk-layout bk-layout-has-sidebar" style="height:calc(100% - 60px)">
+    <div class="bk-sidebar slide-open">
+        <div class="nav-list mt45">
+            <ul>
+                <li class="pureLink">
+                    <a href="{{ SITE_URL }}index">
+                      <span class="icon-box">
+                        <i class="bk-icon icon-home"></i>
+                      </span>
+                        <span class="nav-name">首页</span>
+                    </a>
+                </li>
+                <li class="pureLink open">
+                    <a href="{{ SITE_URL }}config">
+                      <span class="icon-box">
+                        <i class="bk-icon icon-cog"></i>
+                      </span>
+                        <span class="nav-name">配置</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; 2012-2020 蓝鲸智云.</p>
+            <span>All Rights Reserved.</span>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <div class="bk-panel bk-panel-title-btns">
+            <div class="bk-panel-header" role="tab">
+                <div class="panel-title">ElasticSearch配置</div>
+            </div>
+            <div class="bk-panel-body p25" style="border-bottom: 1px solid #ddd;">
+                <form class="bk-form">
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div style="width:45%;float:left;">
+                                <div class="bk-form-item is-required">
+                                    <label class="bk-label" style="width:225px;">ES访问地址</label>
+                                    <div class="bk-form-content" style="margin-left:225px;">
+                                        <input type="text" class="bk-form-input" placeholder="请输入ES访问地址"
+                                               value="" id="ip" data-type="count">
+                                    </div>
+                                </div>
+                                <div class="bk-form-item is-required">
+                                    <label class="bk-label" style="width:225px;">ES访问端口</label>
+                                    <div class="bk-form-content" style="margin-left:225px;">
+                                        <input type="text" class="bk-form-input" placeholder="请输入ES访问端口" value=""
+                                               id="port" data-type="count">
+                                    </div>
+                                </div>
+                                <div class="bk-form-item is-required">
+                                    <label class="bk-label" style="width:225px;">ES访问用户</label>
+                                    <div class="bk-form-content" style="margin-left:225px;">
+                                        <input type="text" class="bk-form-input" placeholder="请输入ES访问用户" value=""
+                                               id="user" data-type="count">
+                                    </div>
+                                </div>
+                                <div class="bk-form-item is-required">
+                                    <label class="bk-label" style="width:225px;">ES访问密码</label>
+                                    <div class="bk-form-content" style="margin-left:225px;">
+                                        <input type="text" class="bk-form-input" placeholder="请输入ES访问密码" value=""
+                                               id="password" data-type="count">
+                                    </div>
+                                </div>
+
+                                <div class="bk-form-item is-required">
+                                    <label class="bk-label" style="width:225px;">索引名称</label>
+                                    <div class="bk-form-content" style="margin-left:225px;">
+                                        <input type="text" class="bk-form-input" placeholder="请输入索引名称" value=""
+                                               id="index_name" data-type="count">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid" style="margin-top: 20px">
+                        <div class="row">
+                            <div style="width:45%;float:left;">
+                                <div class="bk-form-item">
+                                    <div class="bk-form-content tl" style="margin-left:225px;">
+                                        <button type="button" class="bk-button bk-primary" title="保存" id="submit">
+                                            提交
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://magicbox.bk.tencent.com/static_api/v3/assets/js/jquery-1.10.2.min.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/config.js"></script>
+</body>
+
+</html>
